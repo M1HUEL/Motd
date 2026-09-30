@@ -3,3 +3,11 @@ version: 1.0.0
 main: com.itson.Motd.MotdPlugin
 api-version: '26.2'
 author: M1HUEL
+commands:
+  motd:
+    description: Reload the Motd configuration.
+    permission: motd.reload
+permissions:
+  motd.reload:
+    description: Allows reloading the Motd configuration.
+    default: op
