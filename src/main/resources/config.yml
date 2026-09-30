@@ -1,0 +1,4 @@
+# First line of the server MOTD.
+line-1: "&aWelcome to the server!"
+# Second line of the server MOTD.
+line-2: "&bEnjoy your stay!"
