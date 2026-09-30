@@ -1,0 +1,36 @@
+plugins {
+  id 'java'
+}
+
+group = 'com.itson'
+version = '1.0.0'
+description = 'A Paper plugin that manages the server MOTD.'
+
+repositories {
+  mavenCentral()
+  maven {
+    name = 'papermc'
+    url = 'https://repo.papermc.io/repository/maven-public/'
+  }
+}
+
+dependencies {
+  compileOnly libs.paper.api
+
+  testImplementation libs.junit.jupiter
+  testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(25)
+  }
+}
+
+base {
+  archivesName = 'Motd'
+}
+
+tasks.named('test') {
+  useJUnitPlatform()
+}

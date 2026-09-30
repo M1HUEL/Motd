@@ -1,0 +1,5 @@
+name: Motd
+version: 1.0.0
+main: com.itson.Motd.MotdPlugin
+api-version: '26.2'
+author: M1HUEL
