@@ -14,7 +14,9 @@ public final class MotdPlugin extends JavaPlugin {
     saveDefaultConfig();
     motdConfig = new MotdConfig(this);
     getServer().getPluginManager().registerEvents(new ServerListPingListener(this), this);
-    getCommand("motd").setExecutor(new MotdCommand(this));
+    MotdCommand motdCommand = new MotdCommand(this);
+    getCommand("motd").setExecutor(motdCommand);
+    getCommand("motd").setTabCompleter(motdCommand);
     getLogger().info("Motd v" + getPluginMeta().getVersion() + " enabled.");
   }
 
