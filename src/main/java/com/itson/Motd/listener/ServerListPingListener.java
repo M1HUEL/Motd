@@ -16,7 +16,7 @@ public final class ServerListPingListener implements Listener {
 
   @EventHandler
   public void onServerListPing(PaperServerListPingEvent event) {
-    String motd = plugin.getPluginConfig().getMotd();
+    String motd = plugin.getMotdConfig().getMotd();
     if (!motd.isBlank()) {
       event.motd(MiniMessage.miniMessage().deserialize(motd));
     }

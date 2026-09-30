@@ -2,12 +2,12 @@ package com.itson.Motd.config;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class PluginConfig {
+public final class MotdConfig {
 
   private final JavaPlugin plugin;
   private String motd;
 
-  public PluginConfig(JavaPlugin plugin) {
+  public MotdConfig(JavaPlugin plugin) {
     this.plugin = plugin;
     reload();
   }

@@ -23,7 +23,7 @@ public final class MotdCommand implements CommandExecutor {
       sender.sendMessage(MINI_MESSAGE.deserialize("<red>Usage: /motd reload"));
       return true;
     }
-    plugin.getPluginConfig().reload();
+    plugin.getMotdConfig().reload();
     sender.sendMessage(MINI_MESSAGE.deserialize("<green>Motd configuration reloaded."));
     return true;
   }

@@ -1,18 +1,18 @@
 package com.itson.Motd;
 
 import com.itson.Motd.command.MotdCommand;
-import com.itson.Motd.config.PluginConfig;
+import com.itson.Motd.config.MotdConfig;
 import com.itson.Motd.listener.ServerListPingListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MotdPlugin extends JavaPlugin {
 
-  private PluginConfig pluginConfig;
+  private MotdConfig motdConfig;
 
   @Override
   public void onEnable() {
     saveDefaultConfig();
-    pluginConfig = new PluginConfig(this);
+    motdConfig = new MotdConfig(this);
     getServer().getPluginManager().registerEvents(new ServerListPingListener(this), this);
     getCommand("motd").setExecutor(new MotdCommand(this));
     getLogger().info("Motd v" + getPluginMeta().getVersion() + " enabled.");
@@ -23,7 +23,7 @@ public final class MotdPlugin extends JavaPlugin {
     getLogger().info("Motd has been disabled.");
   }
 
-  public PluginConfig getPluginConfig() {
-    return pluginConfig;
+  public MotdConfig getMotdConfig() {
+    return motdConfig;
   }
 }
