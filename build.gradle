@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.itson'
 version = '1.0.0'
-description = 'A Paper plugin that manages the server MOTD.'
+description = 'MOTD plugin for Paper'
 
 repositories {
   mavenCentral()
@@ -27,8 +27,17 @@ java {
   }
 }
 
-base {
-  archivesName = 'Motd'
+tasks.named('processResources').configure {
+  def expansions = [
+    name       : rootProject.name,
+    version    : project.version,
+    description: project.description,
+    apiVersion : '26.2'
+  ]
+  inputs.properties expansions
+  filesMatching('plugin.yml') {
+    expand expansions
+  }
 }
 
 tasks.named('test') {

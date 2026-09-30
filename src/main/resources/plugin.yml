@@ -1,7 +1,8 @@
-name: Motd
-version: 1.0.0
+name: ${name}
+version: ${version}
+description: ${description}
 main: com.itson.Motd.MotdPlugin
-api-version: '26.2'
+api-version: '${apiVersion}'
 author: M1HUEL
 commands:
   motd:
