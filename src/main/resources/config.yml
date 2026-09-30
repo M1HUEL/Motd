@@ -1,4 +1,4 @@
 # First line of the server MOTD.
-line-1: "&aWelcome to the server!"
+line-1: "<gradient:green:yellow>Welcome to the server!"
 # Second line of the server MOTD.
-line-2: "&bEnjoy your stay!"
+line-2: "<gold>Enjoy your stay!"
