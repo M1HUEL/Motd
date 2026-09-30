@@ -1,4 +1,3 @@
-# First line of the server MOTD.
-line-1: "<gradient:green:yellow>Welcome to the server!"
-# Second line of the server MOTD.
-line-2: "<gold>Enjoy your stay!"
+# The server MOTD, shown on the server list.
+# Use MiniMessage tags: <color>, <bold>, <gradient>, <newline>, etc.
+motd: "<gradient:green:yellow>Welcome to the server!<newline><gold>Enjoy your stay!"
