@@ -1,5 +1,5 @@
 [versions]
-paper-api = "26.2.build.+"
+paper-api = "26.2.build.129-stable"
 junit-jupiter = "6.0.1"
 
 [libraries]
